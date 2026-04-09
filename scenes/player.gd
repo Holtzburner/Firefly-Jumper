@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @export var acceleration: float = 1400.0
 @export var deceleration: float = 1800.0
-@export var jump_velocity: float = -200.0
+@export var jump_velocity: float = -400.0
 @export var coyote_time: float = 0.12
 @export var jump_buffer_time: float = 0.12
 
@@ -21,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	_update_animation()
 
 func _handle_jump_input(delta: float) -> void:
-	# Для автobh-hop:
 	if Input.is_action_pressed("ui_accept"):
 		jump_buffer_timer = jump_buffer_time
 	else:
