@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Frog Delivery"
+config/name="Firefly Jumper"
 run/main_scene="uid://dhp1qj687fsu4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 

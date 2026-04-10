@@ -66,3 +66,7 @@ func _update_animation() -> void:
 	else:
 		if anim.animation != "Idle":
 			anim.play("Idle")
+
+
+func _on_світлячки_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

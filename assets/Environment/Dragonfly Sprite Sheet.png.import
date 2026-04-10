@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://62lpb0xlj0tw"
-path="res://.godot/imported/16 x16 decorations.png-4d811e2693aa265728d250d36fe835f7.ctex"
+uid="uid://dlmk8v6ad4sbw"
+path="res://.godot/imported/Dragonfly Sprite Sheet.png-29ed5614bd2d04b3ef7be3cc5b3ffb02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/16x16 decorations/16 x16 decorations.png"
-dest_files=["res://.godot/imported/16 x16 decorations.png-4d811e2693aa265728d250d36fe835f7.ctex"]
+source_file="res://assets/Environment/Dragonfly Sprite Sheet.png"
+dest_files=["res://.godot/imported/Dragonfly Sprite Sheet.png-29ed5614bd2d04b3ef7be3cc5b3ffb02.ctex"]
 
 [params]
 

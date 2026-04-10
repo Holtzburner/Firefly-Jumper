@@ -1,10 +1,13 @@
 [gd_scene format=4 uid="uid://dhp1qj687fsu4"]
 
+[ext_resource type="Script" uid="uid://owrspdbw1upy" path="res://scenes/mapa_1.gd" id="1_whjft"]
 [ext_resource type="Texture2D" uid="uid://cfdw86d5y0c0w" path="res://assets/Background/Background.png" id="1_wtcfe"]
 [ext_resource type="TileSet" uid="uid://dkhqi7ep1a2v7" path="res://assets/Tileset/new_tile_set.tres" id="2_wwpf4"]
 [ext_resource type="PackedScene" uid="uid://clifs3jnq4sbx" path="res://scenes/player.tscn" id="3_7rlrr"]
+[ext_resource type="PackedScene" uid="uid://tg87a7feyccn" path="res://scenes/svitliaczky.tscn" id="5_7nrbu"]
 
 [node name="Node2D" type="Node2D" unique_id=727441736]
+script = ExtResource("1_whjft")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1386067480]
 z_index = -10
@@ -31,3 +34,126 @@ position = Vector2(213, 265)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=607676624]
 zoom = Vector2(2, 2)
+
+[node name="Світлячки (Area2D)" parent="." unique_id=428971548 instance=ExtResource("5_7nrbu")]
+
+[node name="HUD (CanvasLayer)" type="CanvasLayer" parent="." unique_id=684098247]
+
+[node name="ScoreLabel" type="Label" parent="HUD (CanvasLayer)" unique_id=75918485]
+unique_name_in_owner = true
+offset_left = 25.0
+offset_top = 112.0
+offset_right = 125.0
+offset_bottom = 135.0
+text = "Світлячки: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeLabel" type="Label" parent="HUD (CanvasLayer)" unique_id=2000429401]
+unique_name_in_owner = true
+offset_left = 25.0
+offset_top = 135.0
+offset_right = 98.0
+offset_bottom = 158.0
+text = "Час: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="FireflySpawner (Node2D)" type="Node2D" parent="." unique_id=1523059542]
+
+[node name="SpawnPoints (Node2D)" type="Node2D" parent="FireflySpawner (Node2D)" unique_id=2088675274]
+
+[node name="Marker2D" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=727399492]
+position = Vector2(353, 202)
+
+[node name="Marker2D2" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1778069812]
+position = Vector2(834, -39)
+
+[node name="Marker2D3" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=374216891]
+position = Vector2(1843, -137)
+
+[node name="Marker2D4" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1229887905]
+position = Vector2(2400, 87)
+
+[node name="Marker2D5" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1243705287]
+position = Vector2(1905, 12)
+
+[node name="Marker2D6" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1624224018]
+position = Vector2(1120, 180)
+
+[node name="Marker2D7" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=438108602]
+position = Vector2(2354, -152)
+
+[node name="Marker2D8" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1483712996]
+position = Vector2(1569, 69)
+
+[node name="Marker2D9" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1170300452]
+position = Vector2(2451, -73)
+
+[node name="Marker2D10" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=828015172]
+position = Vector2(1299, -88)
+
+[node name="Marker2D11" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1212395209]
+position = Vector2(2131, -8)
+
+[node name="Marker2D12" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1980905882]
+position = Vector2(576, -42)
+
+[node name="Marker2D13" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1884100817]
+position = Vector2(2704, 204)
+
+[node name="Marker2D14" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=2102528501]
+position = Vector2(2498, -375)
+
+[node name="Marker2D15" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=343579641]
+position = Vector2(1331, 43)
+
+[node name="Marker2D16" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=8544472]
+position = Vector2(2051, -264)
+
+[node name="Marker2D17" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=821946269]
+position = Vector2(1040, -88)
+
+[node name="Marker2D18" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=329747721]
+position = Vector2(2907, -214)
+
+[node name="Marker2D19" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1025861773]
+position = Vector2(448, 137)
+
+[node name="Marker2D20" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=755857459]
+position = Vector2(339, 72)
+
+[node name="Marker2D21" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=2080323167]
+position = Vector2(3045, -247)
+
+[node name="Marker2D22" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=863765151]
+position = Vector2(1796, 54)
+
+[node name="Marker2D23" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1254116110]
+position = Vector2(2084, -156)
+
+[node name="Marker2D24" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1792809282]
+position = Vector2(1473, -109)
+
+[node name="Marker2D25" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1007170488]
+position = Vector2(2643, -73)
+
+[node name="Marker2D26" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=1172396249]
+position = Vector2(1983, 195)
+
+[node name="Marker2D27" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=532704208]
+position = Vector2(1602, -156)
+
+[node name="Marker2D28" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=2000951359]
+position = Vector2(1170, -25)
+
+[node name="Marker2D29" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=513493027]
+position = Vector2(1060, 52)
+
+[node name="Marker2D30" type="Marker2D" parent="FireflySpawner (Node2D)/SpawnPoints (Node2D)" unique_id=2056621713]
+position = Vector2(689, 108)
+
+[node name="Timer" type="Timer" parent="FireflySpawner (Node2D)" unique_id=559478339]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="Світлячки (Area2D)" to="Player" method="_on_світлячки_area_2d_body_entered"]
+[connection signal="timeout" from="FireflySpawner (Node2D)/Timer" to="." method="_on_timer_timeout"]
