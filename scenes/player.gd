@@ -12,12 +12,28 @@ extends CharacterBody2D
 var coyote_timer: float = 0.0
 var jump_buffer_timer: float = 0.0
 
+var max_fall_speed: float = 0.0
+var was_on_floor: bool = true
+
 func _physics_process(delta: float) -> void:
 	_handle_jump_input(delta)
 	_handle_gravity(delta)
 	_handle_movement(delta)
 	_handle_jump()
+
+	if velocity.y > 0.0:
+		max_fall_speed = max(max_fall_speed, velocity.y)
+
 	move_and_slide()
+
+	if not was_on_floor and is_on_floor():
+		if max_fall_speed > 150.0:
+			velocity.y = -max_fall_speed * 0.5
+		
+		max_fall_speed = 0.0
+
+	was_on_floor = is_on_floor()
+
 	_update_animation()
 
 func _handle_jump_input(delta: float) -> void:
@@ -51,22 +67,10 @@ func _handle_movement(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0.0, deceleration * delta)
 
 func _update_animation() -> void:
-	if not is_on_floor():
-		if velocity.y < 0.0:
-			if anim.animation != "Jump":
-				anim.play("Jump")
-		else:
-			if anim.animation != "Fall":
-				anim.play("Fall")
-		return
-
 	if abs(velocity.x) > 1.0:
-		if anim.animation != "Run":
-			anim.play("Run")
+		anim.play("Run")
 	else:
-		if anim.animation != "Idle":
-			anim.play("Idle")
-
+		anim.play("Idle")
 
 func _on_світлячки_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	pass
